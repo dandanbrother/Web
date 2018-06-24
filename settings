@@ -1,0 +1,23 @@
+{
+	"always_show_minimap_viewport": true,
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"default_encoding": "UTF-8",
+	"font_face": "Fira Code",
+	"font_size": 18,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Emmet",
+		"Git",
+		"Sass",
+		"SublimeLinter-ruby",
+		"Theme - Brogrammer",
+		"Vintage"
+	],
+	"scroll_past_end": false,
+	"show_tab_close_buttons": false,
+	"spell_check": false,
+	"tab_size": 4,
+	"word_wrap": true
+}
+

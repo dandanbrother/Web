@@ -3,9 +3,47 @@
   <head>
     <meta charset="utf-8">
     <title>My test page</title>
+    <!-- <link href="styles/style.css" rel="stylesheet" type="text/css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
   </head>
+
   <body>
+	<h1>Hello Hello</h1>
     <img src="images/dog.jpg" alt="My test image">
-    <p class="editor-note">Hello</p>
-  </body>
+    <p>Here is an unordered list</p>
+    <p>rererere</p>
+    <p>rererere</p>
+    <p>rererere</p>
+    <p>rererere</p>
+    <p>rererere</p>
+    <p>rererere</p>
+    <p>rererere</p>
+    
+    <ul>
+    	<li>hahaha</li>
+    	<li>xixixi</li>
+    	<li>aa</li>
+    </ul>
+    <p>Link : <a href="https://www.mozilla.org/en-US/about/manifesto/" target="_blank">Mozilla Manifesto</a></p>
+
+
+    <button>Change User</button>
+    
+<form id="test-form">
+    <input type="text" name="test">
+    <button type="button" onclick="doSubmitForm()">Submit</button>
+</form>
+
+<script>
+function doSubmitForm() {
+    var form = document.getElementById('test-form');
+    // 可以在此修改form的input...
+    // 提交form:
+    form.submit();
+}
+</script>
+    <script src="scripts/main.js"></script>
+
 </html>
