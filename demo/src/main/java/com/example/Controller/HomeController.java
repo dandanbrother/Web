@@ -8,11 +8,9 @@ import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @Controller
@@ -21,6 +19,30 @@ public class HomeController {
 
 	@Autowired
 	EmployeeService employeeService;
+
+	//保存员工
+	@RequestMapping(value = "/emp", method = RequestMethod.POST)
+	@ResponseBody
+	public Message saveEmp(Employee employee) {
+        employeeService.saveEmp(employee);
+        return Message.sucess();
+	}
+
+	//检查用户名是否可用
+	@RequestMapping(value = "/checkuser")
+	@ResponseBody
+    public Message checkuser(@RequestParam("empName") String empName) {
+		//先判断是否合法
+		String regx = "(^[a-zA-Z0-9_-]{6,16}$)|(^[\\u2E80-\\u9FFF]{2,5})";
+		if (!empName.matches(regx)) {
+			return Message.fail().add("va_msg", "用户名必须6-16位英文数字组合或者2-5为中文。");
+		}
+		boolean result = employeeService.checkUser(empName);
+		if (result)
+			return Message.sucess();
+		else
+			return Message.fail().add("va_msg", "用户名不可用");
+	}
 
 	@RequestMapping(value = "emps")
 	@ResponseBody

@@ -50,12 +50,14 @@
                         <label class="col-sm-2 control-label">empName</label>
                         <div class="col-sm-10">
                             <input type="text" name="name" class="form-control" id="empName_add_input" placeholder="empName">
+                            <span class="help-block"></span>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">email</label>
                         <div class="col-sm-10">
                             <input type="text" name="email" class="form-control" id="email_add_input" placeholder="email@google.com">
+                            <span class="help-block"></span>
                         </div>
                     </div>
                     <div class="form-group">
@@ -70,9 +72,9 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">gender</label>
+                        <label class="col-sm-2 control-label">department</label>
                         <div class="col-sm-10">
-                            <select class="form-control" name="dId">
+                            <select class="form-control" name="dId" id="dept_add_select">
                                 <%--部门--%>
                             </select>
                         </div>
@@ -81,7 +83,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button type="button" class="btn btn-primary">保存</button>
+                <button type="button" class="btn btn-primary" id="emp_save_btn">保存</button>
             </div>
         </div>
     </div>
@@ -118,9 +120,6 @@
                 <tbody>
 
                 </tbody>
-
-
-
             </table>
         </div>
     </div>
@@ -137,6 +136,8 @@
     </div>
 </div>
 <script type="text/javascript">
+    var totalRecord;
+
     $(function () {
         to_page(1);
     });
@@ -161,7 +162,10 @@
     function build_emps_table(result) {
         $("#emps_table tbody").empty();
         var emps = result.extend.pageInfo.list;
+        // emps.sort(emps.id);
+        // console.log(emps);
         $.each(emps, function (index, item) {
+            // alert(index);
             var empIdTd = $("<td></td>").append(item.id);
             var empNameTd = $("<td></td>").append(item.name);
             var genderTd = $("<td></td>").append(item.gender==='M'?'男':'女');
@@ -180,14 +184,13 @@
                 .append(departmentTd)
                 .append(btnTd)
                 .appendTo("#emps_table tbody");
-
-
         })
     }
     
     function build_page_info(result) {
         $("#page_info_area").empty();
-        $("#page_info_area").append("当前第"+ result.extend.pageInfo.pageNum+"页，总共"+ result.extend.pageInfo.pages +"页，总共"+ result.extend.pageInfo.total     +"条记录")
+        $("#page_info_area").append("当前第"+ result.extend.pageInfo.pageNum+"页，总共"+ result.extend.pageInfo.pages +"页，总共"+ result.extend.pageInfo.total +"条记录");
+        totalRecord = result.extend.pageInfo.total;
     }
     
     function build_page_nav(result) {
@@ -237,7 +240,17 @@
         navEle.appendTo("#page_nav_area");
     }
 
+    function reset_form(ele) {
+        $(ele)[0].reset();  //jQuery对象没有reset()，所以[0]取出DOM对象
+        //清空表单样式
+        $(ele).find("*").removeClass("has-error has-success");
+        $(ele).find(".help-block").text("");
+    }
+    //点击新增按钮
     $("#emp_add_modal_btn").click(function () {
+        //每次点击新增按钮，完整重置表单
+        reset_form("#empAddModal form");
+
         //点击新增时，发送ajax查询部门列表
         getDepts();
         $("#empAddModal").modal({
@@ -246,13 +259,98 @@
     });
     
     function getDepts() {
+        $("#empAddModal select").empty();
         $.ajax({
             url:"${APP_PATH}/depts",
             type:"GET",
-            susscess:function (result) {
-                console.log(result);
+            success:function (result) {
+                //显示部门信息
+                // console.log(result);
+                // $("#empAddModal select").append("")
+                $.each(result.extend.depts, function () {
+                   var optionEle = $("<option></option>").append(this.depName).attr("value", this.depId);
+                   optionEle.appendTo("#empAddModal select");
+                });
             }
         });
+
+        function validate_add_form() {
+            //正则校验
+            var empName = $("#empName_add_input").val();
+            var regName = /(^[a-zA-Z0-9_-]{6,16}$)|(^[\u2E80-\u9FFF]{2,5})/;
+            if(!regName.test(empName)) {
+                // alert("用户名可以为2-5位中文或者6-16位英文数字下划线组合");
+                show_validate_msg("#empName_add_input", "error", "用户名可以为2-5位中文或者6-16位英文数字下划线组合")
+                return false;
+            } else {
+                show_validate_msg("#empName_add_input", "success", "")
+            }
+            var email = $("#email_add_input").val();
+            var regEmail = /(^[a-zA-Z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+            if(!regEmail.test(email)) {
+                // alert("邮箱格式错误");
+                show_validate_msg("#email_add_input", "error", "邮箱格式错误");
+                return false;
+            } else {
+                show_validate_msg("#email_add_input", "success", "")
+            }
+
+            return true;
+        }
+
+        function show_validate_msg(ele, status, msg) {
+            $(ele).parent().removeClass("has-success has-error");
+            $(ele).next("span").text("");
+            if (status == "success") {
+                $(ele).parent().addClass("has-success");
+                $(ele).next("span").text();
+            } else if (status == "error") {
+                $(ele).parent().addClass("has-error");
+                $(ele).next("span").text(msg);
+            }
+        }
+
+        //员工名字输入框方法
+        $("#empName_add_input").change(function () {
+            $.ajax({
+                url:"${APP_PATH}/checkuser",
+                data:"empName="+this.value,
+                type:"POST",
+                success:function (result) {
+                    if (result.code == 100) {
+                        show_validate_msg("#empName_add_input", "success", "用户名可用");
+                        $("#emp_save_btn").attr("ajax-va", "success");
+                    } else {
+                        show_validate_msg("#empName_add_input", "error", result.extend.va_msg);
+                        $("#emp_save_btn").attr("ajax-va", "error");
+                    }
+                }
+            })
+        });
+
+        //保存员工
+        $("#emp_save_btn").click(function () {
+            //先校验数据
+            if(!validate_add_form()){
+                return false;
+            }
+            if ($(this).attr("ajax-va") == "error")
+                return false;
+
+            //提交数据
+            // alert($("#empAddModal form").serialize());
+            $.ajax({
+                url:"${APP_PATH}/emp",
+                type:"POST",
+                data:$("#empAddModal form").serialize(),
+                success:function (result) {
+                    //保存成功
+                    $("#empAddModal").modal("hide");
+                    to_page(totalRecord);
+                    alert(result.message);
+                }
+            })
+        })
     }
 
 </script>
