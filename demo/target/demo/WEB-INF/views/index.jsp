@@ -331,9 +331,9 @@
         //保存员工
         $("#emp_save_btn").click(function () {
             //先校验数据
-            if(!validate_add_form()){
-                return false;
-            }
+            // if(!validate_add_form()){
+            //     return false;
+            // }
             if ($(this).attr("ajax-va") == "error")
                 return false;
 
@@ -344,10 +344,16 @@
                 type:"POST",
                 data:$("#empAddModal form").serialize(),
                 success:function (result) {
-                    //保存成功
-                    $("#empAddModal").modal("hide");
-                    to_page(totalRecord);
-                    alert(result.message);
+                    if (result.code == 100) {
+                        //保存成功
+                        $("#empAddModal").modal("hide");
+                        to_page(totalRecord);
+                    } else {
+                        //显示失败信息
+                        console.log(result);
+                    }
+
+                    // alert(result.message);
                 }
             })
         })

@@ -8,10 +8,15 @@ import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.validation.Valid;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping(value = "/")
@@ -20,12 +25,23 @@ public class HomeController {
 	@Autowired
 	EmployeeService employeeService;
 
+	//支持JSR303需要导入hibernate
 	//保存员工
 	@RequestMapping(value = "/emp", method = RequestMethod.POST)
 	@ResponseBody
-	public Message saveEmp(Employee employee) {
-        employeeService.saveEmp(employee);
-        return Message.sucess();
+	public Message saveEmp(@Valid Employee employee, BindingResult result) {
+        if (result.hasErrors()) {
+			Map<String, Object> map = new HashMap<>();
+        	List<FieldError> errors = result.getFieldErrors();
+			for (FieldError fieldError : errors) {
+				map.put(fieldError.getField(),fieldError.getDefaultMessage());
+			}
+        	return Message.fail().add("errorFields", map);
+		} else {
+			employeeService.saveEmp(employee);
+			return Message.sucess();
+		}
+
 	}
 
 	//检查用户名是否可用

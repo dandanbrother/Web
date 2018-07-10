@@ -1,12 +1,20 @@
 package com.example.Beans;
 
+import org.hibernate.validator.constraints.Length;
+
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Pattern;
+
 public class Employee {
     private Integer id;
 
+    @Pattern(regexp = "(^[a-zA-Z0-9_-]{6,16}$)|(^[\\u2E80-\\u9FFF]{2,5})", message = "用户名6-16 中文2-5位")
     private String name;
 
     private String gender;
 
+    //@Email
+	@Pattern(regexp = "(^[a-zA-Z0-9_\\.-]+)@([\\da-z\\.-]+)\\.([a-z\\.]{2,6})$", message = "邮箱格式不正确")
     private String email;
 
     private Integer dId;
