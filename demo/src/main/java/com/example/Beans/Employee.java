@@ -80,4 +80,9 @@ public class Employee {
         this.email = email;
         this.dId = dId;
     }
+
+    @Override
+    public String toString() {
+        return "id="+id+"name="+name+"email="+email;
+    }
 }

@@ -1,101 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="MvcTest" time="5.855" tests="1" errors="1" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="MvcTest" time="27.213" tests="1" errors="1" skipped="0" failures="0">
   <properties>
-    <property name="gopherProxySet" value="false"/>
-    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="file.encoding.pkg" value="sun.io"/>
     <property name="java.specification.version" value="1.8"/>
-    <property name="sun.cpu.isalist" value=""/>
-    <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/Users/nidingfan/Desktop/Java/SpringPractice/demo/target/test-classes:/Users/nidingfan/Desktop/Java/SpringPractice/demo/target/classes:/Users/nidingfan/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/nidingfan/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/nidingfan/.m2/repository/org/springframework/spring-webmvc/5.0.5.RELEASE/spring-webmvc-5.0.5.RELEASE.jar:/Users/nidingfan/.m2/repository/org/springframework/spring-aop/5.0.5.RELEASE/spring-aop-5.0.5.RELEASE.jar:/Users/nidingfan/.m2/repository/org/springframework/spring-beans/5.0.5.RELEASE/spring-beans-5.0.5.RELEASE.jar:/Users/nidingfan/.m2/repository/org/springframework/spring-core/5.0.5.RELEASE/spring-core-5.0.5.RELEASE.jar:/Users/nidingfan/.m2/repository/org/springframework/spring-jcl/5.0.5.RELEASE/spring-jcl-5.0.5.RELEASE.jar:/Users/nidingfan/.m2/repository/org/springframework/spring-expression/5.0.5.RELEASE/spring-expression-5.0.5.RELEASE.jar:/Users/nidingfan/.m2/repository/org/springframework/spring-web/5.0.5.RELEASE/spring-web-5.0.5.RELEASE.jar:/Users/nidingfan/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.4/jackson-databind-2.9.4.jar:/Users/nidingfan/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/Users/nidingfan/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.4/jackson-core-2.9.4.jar:/Users/nidingfan/.m2/repository/org/springframework/spring-jdbc/5.0.5.RELEASE/spring-jdbc-5.0.5.RELEASE.jar:/Users/nidingfan/.m2/repository/org/springframework/spring-tx/5.0.5.RELEASE/spring-tx-5.0.5.RELEASE.jar:/Users/nidingfan/.m2/repository/org/springframework/spring-aspects/4.2.5.RELEASE/spring-aspects-4.2.5.RELEASE.jar:/Users/nidingfan/.m2/repository/org/aspectj/aspectjweaver/1.8.8/aspectjweaver-1.8.8.jar:/Users/nidingfan/.m2/repository/org/springframework/spring-context/5.0.5.RELEASE/spring-context-5.0.5.RELEASE.jar:/Users/nidingfan/.m2/repository/org/mybatis/mybatis-spring/1.3.2/mybatis-spring-1.3.2.jar:/Users/nidingfan/.m2/repository/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar:/Users/nidingfan/.m2/repository/org/mybatis/generator/mybatis-generator-core/1.3.5/mybatis-generator-core-1.3.5.jar:/Users/nidingfan/.m2/repository/com/github/pagehelper/pagehelper/5.1.4/pagehelper-5.1.4.jar:/Users/nidingfan/.m2/repository/com/github/jsqlparser/jsqlparser/1.0/jsqlparser-1.0.jar:/Users/nidingfan/.m2/repository/org/springframework/spring-test/5.0.5.RELEASE/spring-test-5.0.5.RELEASE.jar:/Users/nidingfan/.m2/repository/mysql/mysql-connector-java/5.1.46/mysql-connector-java-5.1.46.jar:/Users/nidingfan/.m2/repository/c3p0/c3p0/0.9.1.2/c3p0-0.9.1.2.jar:/Users/nidingfan/.m2/repository/jstl/jstl/1.2/jstl-1.2.jar:/Users/nidingfan/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.class.path" value="C:\Users\nidingfan\Desktop\Web\demo\target\test-classes;C:\Users\nidingfan\Desktop\Web\demo\target\classes;C:\Users\nidingfan\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\nidingfan\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\nidingfan\.m2\repository\org\springframework\spring-webmvc\5.0.5.RELEASE\spring-webmvc-5.0.5.RELEASE.jar;C:\Users\nidingfan\.m2\repository\org\springframework\spring-aop\5.0.5.RELEASE\spring-aop-5.0.5.RELEASE.jar;C:\Users\nidingfan\.m2\repository\org\springframework\spring-beans\5.0.5.RELEASE\spring-beans-5.0.5.RELEASE.jar;C:\Users\nidingfan\.m2\repository\org\springframework\spring-core\5.0.5.RELEASE\spring-core-5.0.5.RELEASE.jar;C:\Users\nidingfan\.m2\repository\org\springframework\spring-jcl\5.0.5.RELEASE\spring-jcl-5.0.5.RELEASE.jar;C:\Users\nidingfan\.m2\repository\org\springframework\spring-expression\5.0.5.RELEASE\spring-expression-5.0.5.RELEASE.jar;C:\Users\nidingfan\.m2\repository\org\springframework\spring-web\5.0.5.RELEASE\spring-web-5.0.5.RELEASE.jar;C:\Users\nidingfan\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.9.4\jackson-databind-2.9.4.jar;C:\Users\nidingfan\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;C:\Users\nidingfan\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.4\jackson-core-2.9.4.jar;C:\Users\nidingfan\.m2\repository\org\hibernate\validator\hibernate-validator\6.0.10.Final\hibernate-validator-6.0.10.Final.jar;C:\Users\nidingfan\.m2\repository\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar;C:\Users\nidingfan\.m2\repository\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logging-3.3.2.Final.jar;C:\Users\nidingfan\.m2\repository\com\fasterxml\classmate\1.3.4\classmate-1.3.4.jar;C:\Users\nidingfan\.m2\repository\org\springframework\spring-jdbc\5.0.5.RELEASE\spring-jdbc-5.0.5.RELEASE.jar;C:\Users\nidingfan\.m2\repository\org\springframework\spring-tx\5.0.5.RELEASE\spring-tx-5.0.5.RELEASE.jar;C:\Users\nidingfan\.m2\repository\org\springframework\spring-aspects\4.2.5.RELEASE\spring-aspects-4.2.5.RELEASE.jar;C:\Users\nidingfan\.m2\repository\org\aspectj\aspectjweaver\1.8.8\aspectjweaver-1.8.8.jar;C:\Users\nidingfan\.m2\repository\org\springframework\spring-context\5.0.5.RELEASE\spring-context-5.0.5.RELEASE.jar;C:\Users\nidingfan\.m2\repository\org\mybatis\mybatis-spring\1.3.2\mybatis-spring-1.3.2.jar;C:\Users\nidingfan\.m2\repository\org\mybatis\mybatis\3.4.5\mybatis-3.4.5.jar;C:\Users\nidingfan\.m2\repository\org\mybatis\generator\mybatis-generator-core\1.3.5\mybatis-generator-core-1.3.5.jar;C:\Users\nidingfan\.m2\repository\com\github\pagehelper\pagehelper\5.1.4\pagehelper-5.1.4.jar;C:\Users\nidingfan\.m2\repository\com\github\jsqlparser\jsqlparser\1.0\jsqlparser-1.0.jar;C:\Users\nidingfan\.m2\repository\org\springframework\spring-test\5.0.5.RELEASE\spring-test-5.0.5.RELEASE.jar;C:\Users\nidingfan\.m2\repository\mysql\mysql-connector-java\5.1.46\mysql-connector-java-5.1.46.jar;C:\Users\nidingfan\.m2\repository\c3p0\c3p0\0.9.1.2\c3p0-0.9.1.2.jar;C:\Users\nidingfan\.m2\repository\jstl\jstl\1.2\jstl-1.2.jar;C:\Users\nidingfan\.m2\repository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
-    <property name="user.timezone" value="Asia/Shanghai"/>
-    <property name="user.country.format" value="CN"/>
+    <property name="user.timezone" value=""/>
     <property name="java.vm.specification.version" value="1.8"/>
-    <property name="os.name" value="Mac OS X"/>
-    <property name="user.country" value="US"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="user.country" value="CN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/lib"/>
-    <property name="sun.java.command" value="/Users/nidingfan/Desktop/Java/SpringPractice/demo/target/surefire/surefirebooter3008853470749873375.jar /Users/nidingfan/Desktop/Java/SpringPractice/demo/target/surefire 2018-05-17T20-42-52_224-jvmRun1 surefire2646055813808899831tmp surefire_0352260869179777973tmp"/>
-    <property name="surefire.test.class.path" value="/Users/nidingfan/Desktop/Java/SpringPractice/demo/target/test-classes:/Users/nidingfan/Desktop/Java/SpringPractice/demo/target/classes:/Users/nidingfan/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/nidingfan/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/nidingfan/.m2/repository/org/springframework/spring-webmvc/5.0.5.RELEASE/spring-webmvc-5.0.5.RELEASE.jar:/Users/nidingfan/.m2/repository/org/springframework/spring-aop/5.0.5.RELEASE/spring-aop-5.0.5.RELEASE.jar:/Users/nidingfan/.m2/repository/org/springframework/spring-beans/5.0.5.RELEASE/spring-beans-5.0.5.RELEASE.jar:/Users/nidingfan/.m2/repository/org/springframework/spring-core/5.0.5.RELEASE/spring-core-5.0.5.RELEASE.jar:/Users/nidingfan/.m2/repository/org/springframework/spring-jcl/5.0.5.RELEASE/spring-jcl-5.0.5.RELEASE.jar:/Users/nidingfan/.m2/repository/org/springframework/spring-expression/5.0.5.RELEASE/spring-expression-5.0.5.RELEASE.jar:/Users/nidingfan/.m2/repository/org/springframework/spring-web/5.0.5.RELEASE/spring-web-5.0.5.RELEASE.jar:/Users/nidingfan/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.4/jackson-databind-2.9.4.jar:/Users/nidingfan/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/Users/nidingfan/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.4/jackson-core-2.9.4.jar:/Users/nidingfan/.m2/repository/org/springframework/spring-jdbc/5.0.5.RELEASE/spring-jdbc-5.0.5.RELEASE.jar:/Users/nidingfan/.m2/repository/org/springframework/spring-tx/5.0.5.RELEASE/spring-tx-5.0.5.RELEASE.jar:/Users/nidingfan/.m2/repository/org/springframework/spring-aspects/4.2.5.RELEASE/spring-aspects-4.2.5.RELEASE.jar:/Users/nidingfan/.m2/repository/org/aspectj/aspectjweaver/1.8.8/aspectjweaver-1.8.8.jar:/Users/nidingfan/.m2/repository/org/springframework/spring-context/5.0.5.RELEASE/spring-context-5.0.5.RELEASE.jar:/Users/nidingfan/.m2/repository/org/mybatis/mybatis-spring/1.3.2/mybatis-spring-1.3.2.jar:/Users/nidingfan/.m2/repository/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar:/Users/nidingfan/.m2/repository/org/mybatis/generator/mybatis-generator-core/1.3.5/mybatis-generator-core-1.3.5.jar:/Users/nidingfan/.m2/repository/com/github/pagehelper/pagehelper/5.1.4/pagehelper-5.1.4.jar:/Users/nidingfan/.m2/repository/com/github/jsqlparser/jsqlparser/1.0/jsqlparser-1.0.jar:/Users/nidingfan/.m2/repository/org/springframework/spring-test/5.0.5.RELEASE/spring-test-5.0.5.RELEASE.jar:/Users/nidingfan/.m2/repository/mysql/mysql-connector-java/5.1.46/mysql-connector-java-5.1.46.jar:/Users/nidingfan/.m2/repository/c3p0/c3p0/0.9.1.2/c3p0-0.9.1.2.jar:/Users/nidingfan/.m2/repository/jstl/jstl/1.2/jstl-1.2.jar:/Users/nidingfan/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_161\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\NIDING~1\AppData\Local\Temp\surefire6682327039361662679\surefirebooter2919753038566950525.jar C:\Users\nidingfan\AppData\Local\Temp\surefire6682327039361662679 2018-07-11T23-18-06_577-jvmRun1 surefire4996918452148726902tmp surefire_0640227434913738002tmp"/>
+    <property name="surefire.test.class.path" value="C:\Users\nidingfan\Desktop\Web\demo\target\test-classes;C:\Users\nidingfan\Desktop\Web\demo\target\classes;C:\Users\nidingfan\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\nidingfan\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\nidingfan\.m2\repository\org\springframework\spring-webmvc\5.0.5.RELEASE\spring-webmvc-5.0.5.RELEASE.jar;C:\Users\nidingfan\.m2\repository\org\springframework\spring-aop\5.0.5.RELEASE\spring-aop-5.0.5.RELEASE.jar;C:\Users\nidingfan\.m2\repository\org\springframework\spring-beans\5.0.5.RELEASE\spring-beans-5.0.5.RELEASE.jar;C:\Users\nidingfan\.m2\repository\org\springframework\spring-core\5.0.5.RELEASE\spring-core-5.0.5.RELEASE.jar;C:\Users\nidingfan\.m2\repository\org\springframework\spring-jcl\5.0.5.RELEASE\spring-jcl-5.0.5.RELEASE.jar;C:\Users\nidingfan\.m2\repository\org\springframework\spring-expression\5.0.5.RELEASE\spring-expression-5.0.5.RELEASE.jar;C:\Users\nidingfan\.m2\repository\org\springframework\spring-web\5.0.5.RELEASE\spring-web-5.0.5.RELEASE.jar;C:\Users\nidingfan\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.9.4\jackson-databind-2.9.4.jar;C:\Users\nidingfan\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;C:\Users\nidingfan\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.4\jackson-core-2.9.4.jar;C:\Users\nidingfan\.m2\repository\org\hibernate\validator\hibernate-validator\6.0.10.Final\hibernate-validator-6.0.10.Final.jar;C:\Users\nidingfan\.m2\repository\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar;C:\Users\nidingfan\.m2\repository\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logging-3.3.2.Final.jar;C:\Users\nidingfan\.m2\repository\com\fasterxml\classmate\1.3.4\classmate-1.3.4.jar;C:\Users\nidingfan\.m2\repository\org\springframework\spring-jdbc\5.0.5.RELEASE\spring-jdbc-5.0.5.RELEASE.jar;C:\Users\nidingfan\.m2\repository\org\springframework\spring-tx\5.0.5.RELEASE\spring-tx-5.0.5.RELEASE.jar;C:\Users\nidingfan\.m2\repository\org\springframework\spring-aspects\4.2.5.RELEASE\spring-aspects-4.2.5.RELEASE.jar;C:\Users\nidingfan\.m2\repository\org\aspectj\aspectjweaver\1.8.8\aspectjweaver-1.8.8.jar;C:\Users\nidingfan\.m2\repository\org\springframework\spring-context\5.0.5.RELEASE\spring-context-5.0.5.RELEASE.jar;C:\Users\nidingfan\.m2\repository\org\mybatis\mybatis-spring\1.3.2\mybatis-spring-1.3.2.jar;C:\Users\nidingfan\.m2\repository\org\mybatis\mybatis\3.4.5\mybatis-3.4.5.jar;C:\Users\nidingfan\.m2\repository\org\mybatis\generator\mybatis-generator-core\1.3.5\mybatis-generator-core-1.3.5.jar;C:\Users\nidingfan\.m2\repository\com\github\pagehelper\pagehelper\5.1.4\pagehelper-5.1.4.jar;C:\Users\nidingfan\.m2\repository\com\github\jsqlparser\jsqlparser\1.0\jsqlparser-1.0.jar;C:\Users\nidingfan\.m2\repository\org\springframework\spring-test\5.0.5.RELEASE\spring-test-5.0.5.RELEASE.jar;C:\Users\nidingfan\.m2\repository\mysql\mysql-connector-java\5.1.46\mysql-connector-java-5.1.46.jar;C:\Users\nidingfan\.m2\repository\c3p0\c3p0\0.9.1.2\c3p0-0.9.1.2.jar;C:\Users\nidingfan\.m2\repository\jstl\jstl\1.2\jstl-1.2.jar;C:\Users\nidingfan\.m2\repository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="user.home" value="/Users/nidingfan"/>
-    <property name="user.language" value="en"/>
+    <property name="user.home" value="C:\Users\nidingfan"/>
+    <property name="user.language" value="zh"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre"/>
-    <property name="basedir" value="/Users/nidingfan/Desktop/Java/SpringPractice/demo"/>
-    <property name="file.separator" value="/"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_161\jre"/>
+    <property name="basedir" value="C:\Users\nidingfan\Desktop\Web\demo"/>
+    <property name="file.separator" value="\"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/Users/nidingfan/Desktop/Java/SpringPractice/demo/target/surefire/surefirebooter3008853470749873375.jar"/>
-    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/classes"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\NIDING~1\AppData\Local\Temp\surefire6682327039361662679\surefirebooter2919753038566950525.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_161\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_161\jre\classes"/>
+    <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="1.8.0_40-b25"/>
+    <property name="java.runtime.version" value="1.8.0_161-b12"/>
     <property name="user.name" value="nidingfan"/>
-    <property name="path.separator" value=":"/>
-    <property name="os.version" value="10.13.3"/>
-    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_161\jre\lib\endorsed"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="file.encoding" value="US-ASCII"/>
+    <property name="file.encoding" value="GBK"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="localRepository" value="/Users/nidingfan/.m2/repository"/>
+    <property name="localRepository" value="C:\Users\nidingfan\.m2\repository"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
-    <property name="java.io.tmpdir" value="/var/folders/kb/nwjbnqxd7rzbkcqpd1n8nqyr0000gn/T/"/>
-    <property name="idea.version" value="2018.1.2"/>
-    <property name="java.version" value="1.8.0_40"/>
-    <property name="user.dir" value="/Users/nidingfan/Desktop/Java/SpringPractice/demo"/>
-    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="C:\Users\NIDING~1\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2018.1.5"/>
+    <property name="java.version" value="1.8.0_161"/>
+    <property name="user.dir" value="C:\Users\nidingfan\Desktop\Web\demo"/>
+    <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
-    <property name="sun.os.patch.level" value="unknown"/>
-    <property name="java.library.path" value="/Users/nidingfan/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_161\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32\WBEM;C:\MinGW\bin;C:\Program Files\Java\jdk1.8.0_161\bin;C:\Program Files\Java\jre1.8.0_161\bin;E:\Mysql\mysql-5.6.38-winx64\bin;C:\Program Files\Git\bin;E:\Maven\apache-maven-3.5.2\bin;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;E:\ToolPath\gradle-4.6\bin;C:\ProgramData\chocolatey\bin;E:\ToolPath\spring-2.1.0.BUILD-SNAPSHOT\bin;C:\Users\nidingfan\AppData\Local\Programs\Python\Python36\Scripts\;C:\Users\nidingfan\AppData\Local\Programs\Python\Python36\;C:\Users\nidingfan\AppData\Local\Microsoft\WindowsApps;;C:\modeltech64_10.4\win64;C:\texlive\2015\bin\win32;."/>
     <property name="java.vm.info" value="mixed mode"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="java.vm.version" value="25.40-b25"/>
-    <property name="java.ext.dirs" value="/Users/nidingfan/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
-    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="java.vm.version" value="25.161-b12"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="testPage" classname="MvcTest" time="1.08">
+  <testcase name="testPage" classname="MvcTest" time="3.337">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 	at MvcTest.testPage(MvcTest.java:44)
 </error>
-    <system-err><![CDATA[May 17, 2018 8:42:58 PM org.springframework.test.context.support.AbstractTestContextBootstrapper getDefaultTestExecutionListenerClassNames
-INFO: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-May 17, 2018 8:42:58 PM org.springframework.test.context.support.AbstractTestContextBootstrapper getTestExecutionListeners
-INFO: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@146ba0ac, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4dfa3a9d, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@6eebc39e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@464bee09, org.springframework.test.context.transaction.TransactionalTestExecutionListener@f6c48ac, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@13deb50e]
-May 17, 2018 8:42:58 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
-INFO: Loading XML bean definitions from URL [file:src/main/webapp/WEB-INF/applicationContext.xml]
-May 17, 2018 8:42:59 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
-INFO: Loading XML bean definitions from URL [file:src/main/webapp/WEB-INF/dispatchServlet-servlet.xml]
-May 17, 2018 8:42:59 PM org.springframework.context.support.AbstractApplicationContext prepareRefresh
-INFO: Refreshing org.springframework.web.context.support.GenericWebApplicationContext@13a5fe33: startup date [Thu May 17 20:42:59 CST 2018]; root of context hierarchy
-May 17, 2018 8:43:00 PM com.mchange.v2.log.MLog <clinit>
-INFO: MLog clients using java 1.4+ standard logging.
-May 17, 2018 8:43:00 PM com.mchange.v2.c3p0.C3P0Registry banner
-INFO: Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
-May 17, 2018 8:43:01 PM org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
-INFO: Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
-May 17, 2018 8:43:02 PM org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry register
-INFO: Mapped "{[/emps]}" onto public com.github.pagehelper.PageInfo com.example.Controller.HomeController.getEmpsWithJson(java.lang.Integer,org.springframework.ui.Model)
-May 17, 2018 8:43:02 PM org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry register
-INFO: Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.example.Controller.HomeController.home()
-May 17, 2018 8:43:02 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter initControllerAdviceCache
-INFO: Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@13a5fe33: startup date [Thu May 17 20:42:59 CST 2018]; root of context hierarchy
-May 17, 2018 8:43:02 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter initControllerAdviceCache
-INFO: Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@13a5fe33: startup date [Thu May 17 20:42:59 CST 2018]; root of context hierarchy
-May 17, 2018 8:43:03 PM org.springframework.mock.web.MockServletContext log
-INFO: Initializing Spring FrameworkServlet ''
-May 17, 2018 8:43:03 PM org.springframework.web.servlet.FrameworkServlet initServletBean
-INFO: FrameworkServlet '': initialization started
-May 17, 2018 8:43:03 PM org.springframework.web.servlet.FrameworkServlet initServletBean
-INFO: FrameworkServlet '': initialization completed in 43 ms
-May 17, 2018 8:43:03 PM com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource getPoolManager
-INFO: Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 2v0fwz9vuk09u2122bkwj|1f9e9475, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 2v0fwz9vuk09u2122bkwj|1f9e9475, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/test?useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+    <system-err><![CDATA[七月 11, 2018 11:18:21 下午 org.springframework.test.context.support.AbstractTestContextBootstrapper getDefaultTestExecutionListenerClassNames
+信息: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+七月 11, 2018 11:18:21 下午 org.springframework.test.context.support.AbstractTestContextBootstrapper getTestExecutionListeners
+信息: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6ddf90b0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@57536d79, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3b0143d3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5a8e6209, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4b4523f8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@731a74c]
+七月 11, 2018 11:18:23 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from URL [file:src/main/webapp/WEB-INF/applicationContext.xml]
+七月 11, 2018 11:18:26 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from URL [file:src/main/webapp/WEB-INF/dispatchServlet-servlet.xml]
+七月 11, 2018 11:18:27 下午 org.springframework.context.support.AbstractApplicationContext prepareRefresh
+信息: Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5f282abb: startup date [Wed Jul 11 23:18:27 CST 2018]; root of context hierarchy
+七月 11, 2018 11:18:30 下午 com.mchange.v2.log.MLog <clinit>
+信息: MLog clients using java 1.4+ standard logging.
+七月 11, 2018 11:18:31 下午 com.mchange.v2.c3p0.C3P0Registry banner
+信息: Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+七月 11, 2018 11:18:37 下午 org.springframework.web.servlet.handler.AbstractUrlHandlerMapping registerHandler
+信息: Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+七月 11, 2018 11:18:37 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry register
+信息: Mapped "{[/depts]}" onto public com.example.Beans.Message com.example.Controller.DepartmentController.getDepts()
+七月 11, 2018 11:18:37 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry register
+信息: Mapped "{[/emp/{ids}],methods=[DELETE]}" onto public com.example.Beans.Message com.example.Controller.HomeController.deleteEmp(java.lang.String)
+七月 11, 2018 11:18:37 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry register
+信息: Mapped "{[/],methods=[GET]}" onto public java.lang.String com.example.Controller.HomeController.home()
+七月 11, 2018 11:18:37 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry register
+信息: Mapped "{[/viewemps],methods=[GET]}" onto public java.lang.String com.example.Controller.HomeController.getEmps(java.lang.Integer,org.springframework.ui.Model)
+七月 11, 2018 11:18:37 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry register
+信息: Mapped "{[/checkuser]}" onto public com.example.Beans.Message com.example.Controller.HomeController.checkuser(java.lang.String)
+七月 11, 2018 11:18:37 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry register
+信息: Mapped "{[/emp],methods=[POST]}" onto public com.example.Beans.Message com.example.Controller.HomeController.saveEmp(com.example.Beans.Employee,org.springframework.validation.BindingResult)
+七月 11, 2018 11:18:37 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry register
+信息: Mapped "{[/emp/{id}],methods=[PUT]}" onto public com.example.Beans.Message com.example.Controller.HomeController.saveEmp(com.example.Beans.Employee)
+七月 11, 2018 11:18:37 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry register
+信息: Mapped "{[/emps]}" onto public com.example.Beans.Message com.example.Controller.HomeController.getEmpsWithJson(java.lang.Integer,org.springframework.ui.Model)
+七月 11, 2018 11:18:37 下午 org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry register
+信息: Mapped "{[/emp/{id}],methods=[GET]}" onto public com.example.Beans.Message com.example.Controller.HomeController.getEmp(java.lang.Integer)
+七月 11, 2018 11:18:38 下午 org.hibernate.validator.internal.util.Version <clinit>
+INFO: HV000001: Hibernate Validator 6.0.10.Final
+七月 11, 2018 11:18:41 下午 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter initControllerAdviceCache
+信息: Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5f282abb: startup date [Wed Jul 11 23:18:27 CST 2018]; root of context hierarchy
+七月 11, 2018 11:18:41 下午 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter initControllerAdviceCache
+信息: Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5f282abb: startup date [Wed Jul 11 23:18:27 CST 2018]; root of context hierarchy
+七月 11, 2018 11:18:42 下午 org.springframework.mock.web.MockServletContext log
+信息: Initializing Spring FrameworkServlet ''
+七月 11, 2018 11:18:42 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+信息: FrameworkServlet '': initialization started
+七月 11, 2018 11:18:42 下午 org.springframework.web.servlet.FrameworkServlet initServletBean
+信息: FrameworkServlet '': initialization completed in 23 ms
+七月 11, 2018 11:18:43 下午 com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource getPoolManager
+信息: Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0yt9w129o1wr133rlhp|776a6d9b, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0yt9w129o1wr133rlhp|776a6d9b, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/test?useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
 ]]></system-err>
   </testcase>
 </testsuite>

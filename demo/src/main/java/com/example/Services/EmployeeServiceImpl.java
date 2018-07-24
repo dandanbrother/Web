@@ -36,4 +36,33 @@ public class EmployeeServiceImpl implements EmployeeService {
 		long count = employeeMapper.countByExample(example);
 		return count == 0;
 	}
+
+	//查询某个员工
+	@Override
+	public Employee getEmp(Integer id) {
+		Employee employee = employeeMapper.selectByPrimaryKey(id);
+		return employee;
+	}
+
+	//更新员工
+	@Override
+	public void updateEmp(Employee employee) {
+		employeeMapper.updateByPrimaryKeySelective(employee);
+	}
+
+	//删除员工
+	@Override
+	public void deleteEmp(Integer id) {
+		employeeMapper.deleteByPrimaryKey(id);
+	}
+
+	//批量删除
+	@Override
+	public void deleteBatch(List<Integer> ids) {
+		EmployeeExample example = new EmployeeExample();
+		Criteria criteria = example.createCriteria();
+		// delete from table where id in {1,2,3}
+		criteria.andIdIn(ids);
+		employeeMapper.deleteByExample(example);
+	}
 }

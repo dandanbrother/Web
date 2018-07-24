@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -24,6 +25,51 @@ public class HomeController {
 
 	@Autowired
 	EmployeeService employeeService;
+
+
+	//删除员工 单个或者批量
+	//批量：1-2-3
+	//单个：1
+	@RequestMapping(value = "emp/{ids}", method = RequestMethod.DELETE)
+	@ResponseBody
+	public Message deleteEmp(@PathVariable("ids") String ids) {
+		if (ids.contains("-")) {
+			//批量删除
+			String[] str_ids = ids.split("-");
+			List<Integer> del_ids = new ArrayList<>();
+			for (String string: str_ids) {
+				del_ids.add(Integer.parseInt(string));
+			}
+			employeeService.deleteBatch(del_ids);
+		} else {
+			employeeService.deleteEmp(Integer.parseInt(ids));
+		}
+
+		return Message.sucess();
+	}
+
+	//若ajax指定PUT，employee对象封装不上
+//	因为Tomcat 1. 将请求体数据封装一个map
+//			   2.request.getParameter("xx")是从map取值
+//	           3.SpringMVC封装POJO对象时 会把POJO每个属性值调用request.getParameter("xx")
+//  Tomcat 不会封装PUT请求数据为map，只有POST
+//	解决方法：需要配置HttpPutFormContentFilter，将请求体重新包装成map，request重新包装，从新的map里取值
+//	保存员工更新
+	@RequestMapping(value = "/emp/{id}", method = RequestMethod.PUT)
+	@ResponseBody
+	public Message saveEmp(Employee employee) {
+		System.out.println(employee);
+		employeeService.updateEmp(employee);
+		return Message.sucess();
+	}
+
+	//根据id查询员工
+	@RequestMapping(value = "/emp/{id}", method = RequestMethod.GET)
+	@ResponseBody
+	public Message getEmp(@PathVariable("id") Integer id) {
+		Employee employee = employeeService.getEmp(id);
+		return Message.sucess().add("emp", employee);
+	}
 
 	//支持JSR303需要导入hibernate
 	//保存员工
